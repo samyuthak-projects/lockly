@@ -1,3 +1,7 @@
 {
-    "samyutha": "$2b$12$NLSJSbE.86WpYa5gnQtL5uwmXI.YS3quIzqeE25L0e3vW6xZAFYkS"
+    "samyutha": "$2b$12$NLSJSbE.86WpYa5gnQtL5uwmXI.YS3quIzqeE25L0e3vW6xZAFYkS",
+    "samyutha1": {
+        "password": "$2b$12$Q9Xfxsoo6nrSTI16gYfzXOLkqKAvRPVC2i2h49RFlRnoTgPGINtZm",
+        "vault": []
+    }
 }

@@ -40,7 +40,7 @@ class AuthFrame(ctk.CTkFrame):
             return
 
         hashed_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
-        self.users[username] = hashed_password
+        self.users[username] = {"password": hashed_password, "vault": []}
         save_users(self.users)
         self.message_label.configure(text="Account created successfully!", text_color="green")
 
@@ -56,7 +56,7 @@ class AuthFrame(ctk.CTkFrame):
             self.message_label.configure(text="Invalid username!", text_color="red")
             return
 
-        stored_hash = self.users[username].encode()
+        stored_hash = self.users[username]["password"].encode()
         if bcrypt.checkpw(password.encode(), stored_hash):
             self.master.switch_frame(DashboardFrame, username)
         else:
