@@ -9,7 +9,7 @@ class AuthFrame(ctk.CTkFrame):
         super().__init__(master, fg_color="#ffd0eb")
         self.master = master
         self.users = load_users()
-        self.title = ctk.CTkLabel(self, text="Welcome to Lockly", font=ctk.CTkFont("Helvetica", size=30, weight="bold"), text_color=("#FF0077"))
+        self.title = ctk.CTkLabel(self, text="Welcome to Lockly", font=ctk.CTkFont("Helvetica", size=30, weight="bold"), text_color=("#000000"))
         self.title.pack(pady=40)
 
         self.username_entry = ctk.CTkEntry(self, placeholder_text="Username", width=250)
