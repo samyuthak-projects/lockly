@@ -13,6 +13,15 @@ class DashboardFrame(ctk.CTkFrame):
         self.vault_frame = ctk.CTkFrame(self, fg_color="#ffe0f0")
         self.vault_frame.pack(pady=20, padx=20, fill="both", expand=True)
 
+        self.website_entry = ctk.CTkEntry(self.vault_frame, placeholder_text="Website")
+        self.website_entry.pack(pady=20)
+
+        self.account_entry = ctk.CTkEntry(self.vault_frame, placeholder_text="Username/Email")
+        self.account_entry.pack(pady=10)
+
+        self.password_entry = ctk.CTkEntry(self.vault_frame, placeholder_text="Password", show="*")
+        self.password_entry.pack(pady=10)
+
         self.logout_button = ctk.CTkButton(self, text="Logout", bg_color="#f44336", fg_color="#f44336", hover_color="#d32f2f", command=self.logout)
         self.logout_button.pack(pady=10)
 
